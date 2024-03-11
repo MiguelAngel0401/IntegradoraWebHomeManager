@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al Perfil de Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="../public/logout.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="perfil">
+            <!-- ... -->
+            <img id="profileImage" class="profile-image" src="">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="saveImage">Guardar imagen</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Sistema de Control de Dispositivos Inteligentes “HoManager”</p>
+    </footer>
+
+    <script src="../js/firebase.js" type="module"></script>
+    <script src="../js/profile.js" type="module"></script>
+    <script src="../js/logout.js" type="module"></script>
+</body>
+</html>

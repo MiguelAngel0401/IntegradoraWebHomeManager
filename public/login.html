@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Manager</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img src="../images/logo.jpg" alt="logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="register.html">Registrarse</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Inicia Sesión en HoManager</h1>
+        <form>
+            <h2>Iniciar Sesión</h2>
+            <label for="usuario">Nickname:</label>
+            <input type="text" id="usuario" name="usuario" required>
+        
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+        
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+        
+
+    </main>
+
+    <footer>
+        <p>@ 2024 Sistema de Control de Dispositivos Inteligentes “HoManager”</p>
+        <p>@Miguel Angel Islas Mendez</p>
+        <p>@Gustavo Angel Damian Gonzalez</p>
+        <p>@Andoni Agustin Lopez Sandoval</p>
+    </footer>
+    <script src="../js/firebase.js" type="module"></script>
+    <script src="../js/login.js" type="module"></script>
+    
+    
+</body>
+</html>
