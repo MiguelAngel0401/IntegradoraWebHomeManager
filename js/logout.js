@@ -4,25 +4,72 @@ const auth = getAuth();
 
 auth.onAuthStateChanged((user) => {
     if (user) {
-        // El usuario ha iniciado sesión
         console.log("El usuario ha iniciado sesión");
     } else {
-        // No hay usuario iniciado sesión
         console.log("No hay usuario iniciado sesión");
     }
 });
 
-// Asegurarse de que el DOM esté completamente cargado antes de agregar el event listener
 document.addEventListener('DOMContentLoaded', (event) => {
-    var logoutButton = document.getElementById('logoutButton');
+    var logoutButton = document.getElementById('yesButton');
     if (logoutButton) {
         logoutButton.addEventListener('click', () => {
-            signOut(auth).then(() => {
-                console.log("Usuario cerró sesión con éxito");
-                window.location.href = "index.html";
-            }).catch((error) => {
-                console.error("Error al cerrar la sesión:", error);
-            });
+            showModal();
+        });
+    }
+
+    var noButton = document.getElementById('noButton');
+    if (noButton) {
+        noButton.addEventListener('click', () => {
+            showCustomAlert("¡Bien, tu sesión sigue activa!");
         });
     }
 });
+
+function showModal() {
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <h2>¿Estás seguro de que deseas cerrar sesión?</h2>
+            <div class="modal-buttons">
+                <button id="confirmButton">Sí</button>
+                <button id="cancelButton">Cancelar</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    var confirmButton = document.getElementById('confirmButton');
+    confirmButton.addEventListener('click', () => {
+        signOut(auth).then(() => {
+            closeModal(); // Cerrar modal primero
+            showCustomAlert("¡Sesión cerrada con éxito!"); // Mostrar mensaje después de cerrar sesión
+            window.location.href = "index.html";
+        }).catch((error) => {
+            console.error("Error al cerrar la sesión:", error);
+        });
+    });
+
+    var cancelButton = document.getElementById('cancelButton');
+    cancelButton.addEventListener('click', () => {
+        closeModal();
+    });
+}
+
+function closeModal() {
+    var modal = document.querySelector('.modal');
+    if (modal) {
+        modal.remove();
+    }
+}
+
+function showCustomAlert(message) {
+    var alertBox = document.createElement('div');
+    alertBox.className = 'alert-box';
+    alertBox.innerHTML = `
+        <p class="alert-message">${message}</p>
+        <button class="alert-button" onclick="this.parentNode.remove()">Aceptar</button>
+    `;
+    document.body.appendChild(alertBox);
+}
