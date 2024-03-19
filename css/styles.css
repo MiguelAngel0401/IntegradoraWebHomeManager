@@ -1,12 +1,12 @@
-/* Estilos para el cuerpo de la página */
+/* Estilos del fondo de la pagina*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right top, #0f0f0fe0, #070707f8); 
+    background: linear-gradient(to right top, #0f0f0fe0, #070707f8);
     color: #ffffff;
 }
 
-/* Estilos para el contenedor principal */
+/* Estilos del container*/
 .container {
     width: 90%;
     margin: 0 auto;
@@ -16,29 +16,29 @@ body {
     padding: 20px 0;
 }
 
-/* Estilos para el contenido principal */
+/* Estilos del contenido principal */
 main {
     text-align: center;
     padding: 30px 0;
     margin-top: 0;
 }
 
-/* Estilos para los encabezados */
+/* Estilos de los h1 en general*/
 h1 {
-    font-size: 60px; /* Tamaño grande */
-    color: #0400ff; /* Color rosado */
-    font-weight: bold; /* Negrita */
-    margin-bottom: 30px; /* Mayor espacio inferior */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente elegante */
-    text-shadow: 3px 3px 6px rgba(26, 1, 255, 0.3); /* Sombra de texto */
-    text-transform: uppercase; /* Convertir texto a mayúsculas */
-    letter-spacing: 3px; /* Espaciado entre letras */
-    line-height: 1.2; /* Altura de línea */
-    text-align: center; /* Alineación centrada */
+    font-size: 25px;
+    color: #0400ff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 6px rgba(26, 1, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    text-align: center;
 }
 
 
-/* Estilos para los párrafos */
+/* Estilos de los p1  */
 p {
     font-size: 25px;
     line-height: 1.6;
@@ -49,97 +49,81 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Estilos para los contenedores de imágenes */
-.images-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-/* Estilos para las imágenes dentro de los contenedores */
-.images-container img {
-    width: 240px;
-    border-radius: 10px;
-}
-
-/* Estilos para el logotipo */
+/* Estilos del logo*/
 .logo {
     width: 200px;
     height: 150px;
     border-radius: 10px;
 }
 
-/* Estilos para la navegación */
-/* Estilos para el menú de navegación */
+/* Estilos de la navegacion */
 nav {
-    background-color: #1f1f1f; /* Color de fondo oscuro */
-    padding: 10px 0; /* Padding arriba y abajo */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
-    border-top: 4px solid #0004ff; /* Borde superior rojo de 2px */
-    border-bottom: 3px solid #0004ff;/* Sombra suave */
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    border-top: 4px solid #0004ff;
+    border-bottom: 3px solid #0004ff;
 }
 
-/* Estilos para la lista de navegación */
+/* Estilos para las listas del menu */
 nav ul {
-    list-style-type: none; /* Elimina los estilos de la lista */
-    margin: 0; /* Elimina el margen predeterminado */
-    padding: 0; /* Elimina el relleno predeterminado */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilos para los elementos de la lista de navegación */
+/* Estilos para los elementos para el menu*/
 nav ul li {
-    display: inline-block; /* Muestra los elementos en línea */
-    margin-right: 20px; /* Espacio entre elementos */
+    display: inline-block; 
+    margin-right: 20px;
 }
 
 /* Estilos para los enlaces de navegación */
 nav ul li a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: #fff; /* Color de texto blanco */
-    font-size: 20px; /* Tamaño de fuente aumentado */
-    padding: 5px 20px; /* Relleno interno */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave */
-    font-family: 'Pacifico', cursive; /* Fuente extravagante */
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4); /* Sombra de texto */
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
 }
 
-/* Estilos al pasar el cursor sobre los enlaces de navegación */
+/* Estilos al pasar el cursor sobre la navegacion*/
 nav ul li a:hover {
-    background-color: #444; /* Color de fondo oscuro al pasar el cursor */
-    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8); /* Sombra de texto aumentada al pasar el cursor */
+    background-color: #444;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
 }
 
-
-
-/* Estilos para el pie de página */
+/* Estilos para el footer */
 footer {
-    background-color: #1f1f1f; /* Color de fondo oscuro */
-    color: #fff; /* Color de texto blanco */
-    text-align: center; /* Alineación centrada */
-    padding: 0px 0; /* Padding generoso arriba y abajo */
-    border-top: 5px solid #0004ff; /* Borde superior rojo de 2px */
-    border-bottom: 5px solid #0004ff; /* Borde inferior verde de 2px */
-    border-radius: 50px 50px 0 0; /* Bordes redondeados en la parte superior */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 0px 0;
+    border-top: 5px solid #0004ff;
+    border-bottom: 5px solid #0004ff;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos para los párrafos dentro del pie de página */
+/* Estilos para los párrafos de footer*/
 footer p {
-    font-size: 24px; /* Tamaño de fuente aumentado */
-    margin: 10px 0; /* Margen entre párrafos */
-    font-family: 'Pacifico', cursive; /* Fuente llamativa */
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4); /* Sombra de texto */
+    font-size: 24px;
+    margin: 10px 0;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
 }
 
-/* Estilos para el párrafo en posición par dentro del pie de página */
+/* Estilos para el párrafo dentro del footer*/
 footer p:nth-child(even) {
-    font-style: italic; /* Estilo cursiva */
-    color: #ffffff; /* Color de texto cyan */
+    font-style: italic;
+    color: #ffffff;
 }
 
-
-/* Estilos para el formulario */
+/* Estilos de los formularios */
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -194,7 +178,7 @@ input[type="submit"]:hover {
     transition: background-color 0.3s;
 }
 
-/* Estilos para la imagen de perfil */
+/* Estilos la imagen del perfil*/
 .profile-image {
     width: 200px;
     height: 200px;
@@ -203,76 +187,67 @@ input[type="submit"]:hover {
     margin-bottom: 20px;
 }
 
-/* Estilos para el cuadro de contenido */
+/* Estilos para el contenido principal */
 .content-box {
     background-color: rgba(0, 0, 0, 0.897);
     padding: 15px;
     border: 2px solid #2400c4c2;
-    border-radius: 20px; /* Bordes más redondeados */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin: 20px auto;
-    max-width: 800px; /* Ancho máximo del cuadro */
+    max-width: 800px;
 }
 
-
-/* Estilos para el título dentro del cuadro */
+/* Estilos para el título del contenido*/
 .content-box h1 {
-    color: #0a19a5; /* Color amarillo para el título */
+    color: #0a19a5;
     margin-bottom: 15px;
     text-align: start;
 }
-.content-box .images-container img {
-    width: 100%;
-    max-width: 400px; /* Ancho máximo de las imágenes */
-    margin-top: 15px;
-}
 
-
-
-
-/*estilos del js*/
-
-/* Estilos para la ventana modal */
+/*Estilos del Java sCRIPT*/
+/* Estilos para la ventana modal del cierre sesion*/
 .modal {
-    position: fixed; /* Fijar la posición */
-    top: 0; /* Desde la parte superior */
-    left: 0; /* Desde la izquierda */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    display: flex; /* Utilizar flexbox para centrar */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Estilos para el contenido de la ventana modal */
+/* Estilos para el contenido de la ventana modal del cierre sesion */
 .modal-content {
-    background-color: #000000; /* Fondo blanco */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos para los botones dentro de la ventana modal */
+/* Estilos para los botones de la venatna modal del ciere de sesion */
 .modal-buttons {
-    margin-top: 20px; /* Espacio superior */
-    display: flex; /* Utilizar flexbox para alinear los botones */
-    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .modal-buttons button {
-    margin: 0 10px; /* Espacio entre botones */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor apuntador */
-    background-color: #007bff; /* Color de fondo azul */
-    color: #0c0c0c; /* Color de texto blanco */
-    transition: background-color 0.3s; /* Transición suave */
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #0c0c0c;
+    transition: background-color 0.3s;
 }
 
+/*Color al pasar el cursor*/
 .modal-buttons button:hover {
-    background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+    background-color: #0056b3
 }
 
 

@@ -40,11 +40,12 @@ function showModal() {
     `;
     document.body.appendChild(modal);
 
+
+    //Ventana Modal para confirmar el cierre de sesion
     var confirmButton = document.getElementById('confirmButton');
     confirmButton.addEventListener('click', () => {
         signOut(auth).then(() => {
-            closeModal(); // Cerrar modal primero
-            showCustomAlert("¡Sesión cerrada con éxito!"); // Mostrar mensaje después de cerrar sesión
+            closeModal();
             window.location.href = "index.html";
         }).catch((error) => {
             console.error("Error al cerrar la sesión:", error);
