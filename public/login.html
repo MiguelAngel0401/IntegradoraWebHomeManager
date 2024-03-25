@@ -15,8 +15,6 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="register.html">Registrarse</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
                     <li><a href="about.html">Acerca de</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
@@ -26,26 +24,24 @@
 
     <main>
         <h1>Inicia Sesión en HoManager</h1>
-        <form>
+        <form id="loginForm">
             <h2>Iniciar Sesión</h2>
             <label for="usuario">Nickname:</label>
-            <input type="text" id="usuario" name="usuario" required>
+            <input type="text" id="usuario" name="usuario" required placeholder="Nickname">
         
             <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
+            <input type="password" id="contrasena" name="contrasena" required placeholder="Contraseña">
         
             <input type="submit" value="Iniciar Sesión">
+            <p id="noCuenta">¿No tienes una cuenta? <a href="register.html" id="registerLink">Regístrate aquí</a>.</p>
         </form>
-        
-
     </main>
 
     <footer>
         <p>@ 2024 Sistema de Control de Dispositivos Inteligentes “HoManager”</p>
     </footer>
+    
     <script src="../js/firebase.js" type="module"></script>
     <script src="../js/login.js" type="module"></script>
-    
-    
 </body>
 </html>

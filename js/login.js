@@ -4,48 +4,125 @@ import { getFirestore, collection, getDocs, query, where } from "https://www.gst
 const auth = getAuth();
 const db = getFirestore();
 
-auth.onAuthStateChanged((user) => {
-    if (user) {
-        // Aqui se muestra en la consola del navegador cuando el ususario ha iniciado sesion
-        console.log("El usuario ha iniciado sesión");
-    } else {
-        // Aqui se muestra en la consola cuando un usuario no inicia sesion
-        console.log("No hay usuario iniciando sesión");
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var nickname = document.getElementById("usuario").value;
+        var contrasena = document.getElementById("contrasena").value;
+
+        const q = query(collection(db, "usuarios"), where("nickname", "==", nickname));
+        getDocs(q)
+            .then((querySnapshot) => {
+                if (!querySnapshot.empty) {
+                    const email = querySnapshot.docs[0].data().email;
+                    signInWithEmailAndPassword(auth, email, contrasena)
+                        .then((userCredential) => {
+                            // El usuario ha iniciado sesión correctamente
+                            showModal();
+                        })
+                        .catch((error) => {
+                            console.error("Error durante el inicio de sesión:", error.message);
+                            // Muestra la ventana modal de error de inicio de sesión
+                            showErrorModal();
+                        });
+                } else {
+                    console.error("Nickname no encontrado");
+                    // Muestra la ventana modal de error de inicio de sesión
+                    showErrorModal();
+                }
+            })
+            .catch((error) => {
+                console.error("Error al buscar el nickname:", error.message);
+                // Muestra la ventana modal de error de inicio de sesión
+                showErrorModal();
+            });
+    });
 });
 
-function iniciarSesion(event) {
-    event.preventDefault();
+// Función para mostrar la ventana modal de inicio de sesión exitoso
+function showModal() {
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Inicio de Sesión Exitoso</h2>
+            <p>¡Bienvenido de vuelta!</p>
+            <div class="modal-buttons">
+                <button id="okButton">OK</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
 
-    var nickname = document.getElementById("usuario").value;
-    var contrasena = document.getElementById("contrasena").value;
+    var span = document.getElementsByClassName("close")[0];
 
-    // Aqui se relaciona el correo referente a su nickname
-    const q = query(collection(db, "usuarios"), where("nickname", "==", nickname));
-    getDocs(q).then((querySnapshot) => {
-        if (!querySnapshot.empty) {
-            // Cuando encuentra en Nickname inicia sesion con el correo que le corresponde
-            const email = querySnapshot.docs[0].data().email;
-            signInWithEmailAndPassword(auth, email, contrasena)
-                .then((userCredential) => {
-                    // Dirige al perfil al momento de iniciar sesion
-                    window.location.href = "profile.html";
-                })
-                .catch((error) => {
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                    console.error("Error durante el inicio de sesión:", errorMessage);
-                });
-        } else {
-            // No encunetra nickname relacionado por lo tanto no s epuede iniciar sesion
-            console.error("Nickname no encontrado");
+    // Cuando el usuario haga clic en <span> (x), cerrar el modal
+    span.onclick = function() {
+        closeModal();
+    }
+
+    // Cuando el usuario haga clic en el botón OK, cerrar el modal y redirigir a la página de perfil
+    var okButton = document.getElementById("okButton");
+    okButton.onclick = function() {
+        closeModal();
+        // Redirigir al usuario a la página de perfil después de cerrar el modal
+        window.location.href = "profile.html";
+    }
+
+    // Cuando el usuario haga clic fuera del modal, cerrarlo
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+            // Redirigir al usuario a la página de perfil después de cerrar el modal
+            window.location.href = "profile.html";
         }
-    }).catch((error) => {
-        console.error("Error al buscar el nickname:", error);
-    });
+    }
 }
 
-// Se carga el DOM para el evento
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector("form").addEventListener("submit", iniciarSesion);
-});
+// Función para mostrar la ventana modal de error de inicio de sesión
+function showErrorModal() {
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Error de Inicio de Sesión</h2>
+            <p>Los datos de inicio de sesión no son correctos. Por favor, inténtalo de nuevo.</p>
+            <div class="modal-buttons">
+                <button id="errorOkButton">OK</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    var span = document.getElementsByClassName("close")[0];
+
+    // Cuando el usuario haga clic en <span> (x), cerrar el modal
+    span.onclick = function() {
+        closeModal();
+    }
+
+    // Cuando el usuario haga clic en el botón OK, cerrar el modal
+    var errorOkButton = document.getElementById("errorOkButton");
+    errorOkButton.onclick = function() {
+        closeModal();
+    }
+
+    // Cuando el usuario haga clic fuera del modal, cerrarlo
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+}
+
+function closeModal() {
+    var modal = document.querySelector('.modal');
+    if (modal) {
+        modal.remove();
+    }
+}

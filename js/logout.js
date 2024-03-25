@@ -46,7 +46,7 @@ function showModal() {
     confirmButton.addEventListener('click', () => {
         signOut(auth).then(() => {
             closeModal();
-            window.location.href = "index.html";
+            window.location.href = "index.html"; // Redirige al usuario a la página de inicio después de cerrar sesión
         }).catch((error) => {
             console.error("Error al cerrar la sesión:", error);
         });

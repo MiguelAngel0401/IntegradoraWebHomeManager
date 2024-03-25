@@ -27,6 +27,14 @@ setPersistence(auth, browserLocalPersistence)
     });
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    var registerForm = document.getElementById("registerForm");
+    if (registerForm) {
+        registerForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            registrarUsuario();
+        });
+    }
+
     function registrarUsuario() {
         var nombre = document.getElementById("nombre").value;
         var email = document.getElementById("email").value;
@@ -41,10 +49,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 setDoc(doc(collection(db, "usuarios"), user.uid), {
                     nombre: nombre,
                     email: email,
-                    nickname: nombre, // Se guardara el nickname en el firebase
+                    nickname: nombre, // Se guardará el nickname en Firebase
                 })
                 .then(function() {
                     console.log("Usuario registrado exitosamente en Firestore");
+                    // Mostrar la ventana modal de registro exitoso
+                    showModal("Registro Exitoso", "¡El usuario se ha registrado exitosamente!", "index.html");
                 })
                 .catch(function(error) {
                     console.error("Error al registrar usuario en Firestore:", error);
@@ -53,16 +63,64 @@ document.addEventListener('DOMContentLoaded', (event) => {
             .catch(function(error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                console.error("Error durante el registro en Firebase Authentication:", errorMessage);
+                if (errorCode === "auth/email-already-in-use") {
+                    // Mostrar la ventana modal de usuario ya registrado
+                    showModal("Usuario ya Registrado", "Ya existe un usuario con este correo electrónico. Por favor, registre uno nuevo.", null);
+                } else {
+                    console.error("Error durante el registro en Firebase Authentication:", errorMessage);
+                }
             });
     }
 
-    // Se carga el DOM para el evento
-    var registerForm = document.getElementById("registerForm");
-    if (registerForm) {
-        registerForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-            registrarUsuario();
-        });
+    // Función para mostrar la ventana modal
+    function showModal(title, message, redirectUrl) {
+        var modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>${title}</h2>
+                <p>${message}</p>
+                <div class="modal-buttons">
+                    <button id="okButton" class="modal-button">OK</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario haga clic en <span> (x), cerrar el modal
+        span.onclick = function() {
+            closeModal();
+        }
+
+        // Cuando el usuario haga clic en el botón "OK", cerrar el modal y redirigir si es necesario
+        var okButton = document.getElementById("okButton");
+        okButton.onclick = function() {
+            closeModal();
+            if (redirectUrl) {
+                // Redirigir al usuario si se especifica una URL de redirección
+                window.location.href = redirectUrl;
+            }
+        }
+
+        // Cuando el usuario haga clic fuera del modal, cerrarlo
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+                if (redirectUrl) {
+                    // Redirigir al usuario si se especifica una URL de redirección
+                    window.location.href = redirectUrl;
+                }
+            }
+        }
+    }
+
+    function closeModal() {
+        var modal = document.querySelector('.modal');
+        if (modal) {
+            modal.remove();
+        }
     }
 });
