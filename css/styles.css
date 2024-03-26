@@ -19,18 +19,17 @@ body {
 /* Estilos del contenido principal */
 main {
     text-align: center;
-    padding: 30px 0;
+    padding: 50px 0;
     margin-top: 0;
 }
 
 /* Estilos de los h1 en general*/
 h1 {
-    font-size: 25px;
-    color: #0400ff;
+    font-size: 23px;
+    color: #0602ec;
     font-weight: bold;
     margin-bottom: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 3px 3px 6px rgba(26, 1, 255, 0.3);
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 1.2;
@@ -39,14 +38,15 @@ h1 {
 
 
 /* Estilos de los p1  */
-p {
-    font-size: 25px;
+p { 
+    font-size: 22px;
     line-height: 1.6;
     color: #fff6f6;
     font-weight: bold;
     margin-bottom: 20px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: justify;
 }
 
 /* Estilos del logo*/
@@ -115,6 +115,7 @@ footer p {
     margin: 10px 0;
     font-family: 'Pacifico', cursive;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+    text-align: center;
 }
 
 /* Estilos para el párrafo dentro del footer*/
@@ -321,6 +322,44 @@ input[type="submit"]:hover {
     color: #ffffff;
     font-weight: bold;
 }
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#imageUpload {
+    margin-top: 20px;
+}
+
+#saveImage {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#saveImage:hover {
+    background-color: #0056b3;
+}
+
 
 
 
