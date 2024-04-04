@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right top, #0f0f0fe0, #070707f8);
+    background: linear-gradient(to right top, #000000, #000000f8);
     color: #ffffff;
 }
 
@@ -25,26 +25,30 @@ main {
 
 /* Estilos de los h1 en general*/
 h1 {
-    font-size: 23px;
-    color: #0602ec;
-    font-weight: bold;
-    margin-bottom: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    line-height: 1.2;
+    color: #00ffff; /* Bright blue color */ 
+    margin-bottom: 20px;
     text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Courier', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 5px 10px;
+    color: transparent;
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
-
 /* Estilos de los p1  */
-p { 
+p {
     font-size: 22px;
     line-height: 1.6;
     color: #fff6f6;
     font-weight: bold;
     margin-bottom: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Courier', monospace;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     text-align: justify;
 }
@@ -58,12 +62,12 @@ p {
 
 /* Estilos de la navegacion */
 nav {
-    background-color: #1f1f1f;
+    background-color: #050505;
     padding: 10px 0;
     border-radius: 20px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-    border-top: 4px solid #0004ff;
-    border-bottom: 3px solid #0004ff;
+    border-top: 4px solid #13f8f896;
+    border-bottom: 3px solid #13f8f896;
 }
 
 /* Estilos para las listas del menu */
@@ -81,14 +85,20 @@ nav ul li {
 
 /* Estilos para los enlaces de navegación */
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    padding: 5px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-family: 'Pacifico', cursive;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+    color: #00ffff; /* Bright blue color */ 
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Courier', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 5px 10px;
+    color: transparent;
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* Estilos al pasar el cursor sobre la navegacion*/
@@ -99,23 +109,32 @@ nav ul li a:hover {
 
 /* Estilos para el footer */
 footer {
-    background-color: #1f1f1f;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 0px 0;
-    border-top: 5px solid #0004ff;
-    border-bottom: 5px solid #0004ff;
+    border-top: 4px solid #13f8f896;
+    border-bottom: 3px solid #13f8f896;
     border-radius: 50px 50px 0 0;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para los párrafos de footer*/
 footer p {
-    font-size: 24px;
-    margin: 10px 0;
-    font-family: 'Pacifico', cursive;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+    color: #00ffff; /* Bright blue color */ 
+    margin-bottom: 20px;
     text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Courier', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 5px 10px;
+    color: transparent;
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* Estilos para el párrafo dentro del footer*/
@@ -192,19 +211,32 @@ input[type="submit"]:hover {
 .content-box {
     background-color: rgba(0, 0, 0, 0.897);
     padding: 15px;
-    border: 2px solid #2400c4c2;
+    border: 2px solid #13f8f896;
+    border-top: 5px solid #13f8f896;
+    border-bottom: 5px solid #13f8f896;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin: 20px auto;
     max-width: 800px;
 }
 
-/* Estilos para el título del contenido*/
-.content-box h1 {
-    color: #0a19a5;
-    margin-bottom: 15px;
-    text-align: start;
-}
+.content-box h1 { 
+    color: #00ffff; /* Bright blue color */ 
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 5px 10px;
+    color: transparent;
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd); /* Colores más claros */
+    -webkit-background-clip: text;
+    background-clip: text;
+ }
+
 
 /*Estilos del Java sCRIPT*/
 /* Estilos para la ventana modal del cierre sesion*/
@@ -292,14 +324,26 @@ input[type="submit"]:hover {
 
 /* Estilos para el encabezado */
 .contact-info h1 {
-    font-size: 2.5em;
-    color: #0400ff;
+    color: #00ffff; /* Bright blue color */ 
     margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 5px 10px;
+    color: transparent;
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* Estilos para el párrafo */
 .contact-info p {
-    font-size: 1.2em;
+    font-size: 25px;
+    font-family: 'Courier', monospace;
     color: #ffffff;
     margin-bottom: 30px;
 }
@@ -307,19 +351,31 @@ input[type="submit"]:hover {
 /* Estilos para la lista de contactos */
 .contact-info ul {
     list-style: none;
+    font-family: 'Courier', monospace;
     padding: 0;
 }
 
 /* Estilos para los elementos de la lista */
 .contact-info li {
+    color: #00ffff; /* Bright blue color */ 
     margin-bottom: 20px;
-    font-size: 1.1em;
-    color: #00ff6a;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier', monospace;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 5px 10px;
+    color: transparent;
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* Estilos para los correos electrónicos */
 .contact-info li:nth-child(odd) {
     color: #ffffff;
+    font-family: 'Courier', monospace;
     font-weight: bold;
 }
 
