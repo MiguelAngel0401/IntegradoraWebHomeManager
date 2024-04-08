@@ -85,7 +85,7 @@ nav ul li {
 
 /* Estilos para los enlaces de navegación */
 nav ul li a {
-    color: #00ffff; /* Bright blue color */
+    color: #00ffff;
     margin-bottom: 20px;
     text-align: center;
     font-size: 22px;
@@ -95,7 +95,7 @@ nav ul li a {
     line-height: 1.2;
     padding: 5px 10px;
     color: transparent;
-    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores para tipo HomeLogo*/
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -120,7 +120,7 @@ footer {
 
 /* Estilos para los párrafos de footer*/
 footer p {
-    color: #00ffff; /* Bright blue color */
+    color: #00ffff;
     margin-bottom: 20px;
     text-align: center;
     font-size: 23px;
@@ -131,7 +131,7 @@ footer p {
     line-height: 1.2;
     padding: 5px 10px;
     color: transparent;
-    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores para tipo HomeLogo*/
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -231,13 +231,13 @@ input[type="submit"]:hover {
     line-height: 1.2;
     padding: 5px 10px;
     color: transparent;
-    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd); /* Colores más claros */
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);   /* Colores para tipo HomeLogo*/
     -webkit-background-clip: text;
     background-clip: text;
 }
 
 
-/*Estilos del Java sCRIPT*/
+/*Estilos del Java SCRIPT*/
 /* Estilos para la ventana modal del cierre sesion*/
 .modal {
     position: fixed;
@@ -334,7 +334,7 @@ input[type="submit"]:hover {
     line-height: 1.2;
     padding: 5px 10px;
     color: transparent;
-    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);    /* Colores para tipo HomeLogo*/
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -366,7 +366,7 @@ input[type="submit"]:hover {
     line-height: 1.2;
     padding: 5px 10px;
     color: transparent;
-    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);  /* Colores más claros */
+    background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd);    /* Colores para tipo HomeLogo*/
     -webkit-background-clip: text;
     background-clip: text;
 }
