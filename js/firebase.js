@@ -4,16 +4,17 @@ import { getAuth, createUserWithEmailAndPassword, setPersistence, browserLocalPe
 
 // Tu configuración de Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyDRfBHsXskhbwpCvtaLcaaZcTRCYKc1iSw",
-  authDomain: "homemanager-58115.firebaseapp.com",
-  projectId: "homemanager-58115",
-  storageBucket: "homemanager-58115.appspot.com",
-  messagingSenderId: "614657986482",
-  appId: "1:614657986482:web:25c61e58072572e80f9eab"
-};
+    apiKey: "AIzaSyCcd9J_ImUItSbBxbI4gC4tTWQxFVU7fxY",
+    authDomain: "homanager-app.firebaseapp.com",
+    databaseURL: "https://homanager-app-default-rtdb.firebaseio.com",
+    projectId: "homanager-app",
+    storageBucket: "homanager-app.appspot.com",
+    messagingSenderId: "892626383124",
+    appId: "1:892626383124:web:2794b667723fa0f5291201",
+  };
 
 // Inicializar Firebase
-const app = initializeApp(firebaseConfig); 
+const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth();
 

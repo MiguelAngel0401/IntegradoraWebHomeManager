@@ -25,7 +25,7 @@ main {
 
 /* Estilos de los h1 en general*/
 h1 {
-    color: #00ffff; /* Bright blue color */ 
+    color: #00ffff; /* Bright blue color */
     margin-bottom: 20px;
     text-align: center;
     font-size: 23px;
@@ -55,8 +55,8 @@ p {
 
 /* Estilos del logo*/
 .logo {
-    width: 200px;
-    height: 150px;
+    width: 210px;
+    height: 180px;
     border-radius: 10px;
 }
 
@@ -79,19 +79,18 @@ nav ul {
 
 /* Estilos para los elementos para el menu*/
 nav ul li {
-    display: inline-block; 
+    display: inline-block;
     margin-right: 20px;
 }
 
 /* Estilos para los enlaces de navegación */
 nav ul li a {
-    color: #00ffff; /* Bright blue color */ 
+    color: #00ffff; /* Bright blue color */
     margin-bottom: 20px;
     text-align: center;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: bold;
     font-family: 'Courier', monospace;
-    text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.2;
     padding: 5px 10px;
@@ -121,7 +120,7 @@ footer {
 
 /* Estilos para los párrafos de footer*/
 footer p {
-    color: #00ffff; /* Bright blue color */ 
+    color: #00ffff; /* Bright blue color */
     margin-bottom: 20px;
     text-align: center;
     font-size: 23px;
@@ -220,8 +219,8 @@ input[type="submit"]:hover {
     max-width: 800px;
 }
 
-.content-box h1 { 
-    color: #00ffff; /* Bright blue color */ 
+.content-box h1 {
+    color: #00ffff; /* Bright blue color */
     margin-bottom: 20px;
     text-align: center;
     font-size: 25px;
@@ -235,7 +234,7 @@ input[type="submit"]:hover {
     background-image: linear-gradient(to right, #0099ff50, #38c8fcd0, #50b8fd); /* Colores más claros */
     -webkit-background-clip: text;
     background-clip: text;
- }
+}
 
 
 /*Estilos del Java sCRIPT*/
@@ -324,7 +323,7 @@ input[type="submit"]:hover {
 
 /* Estilos para el encabezado */
 .contact-info h1 {
-    color: #00ffff; /* Bright blue color */ 
+    color: #00ffff; /* Bright blue color */
     margin-bottom: 20px;
     text-align: center;
     font-size: 30px;
@@ -357,7 +356,7 @@ input[type="submit"]:hover {
 
 /* Estilos para los elementos de la lista */
 .contact-info li {
-    color: #00ffff; /* Bright blue color */ 
+    color: #00ffff; /* Bright blue color */
     margin-bottom: 20px;
     text-align: center;
     font-size: 25px;

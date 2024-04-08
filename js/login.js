@@ -21,22 +21,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     signInWithEmailAndPassword(auth, email, contrasena)
                         .then((userCredential) => {
                             // El usuario ha iniciado sesión correctamente
-                            showModal();
+                            const user = userCredential.user;
+                            if (user) {
+                                // Mostrar ventana modal de éxito
+                                showModal();
+                            } else {
+                                // Mostrar ventana modal de error
+                                showErrorModal();
+                            }
                         })
                         .catch((error) => {
                             console.error("Error durante el inicio de sesión:", error.message);
-                            // Muestra la ventana modal de error de inicio de sesión
+                            // Mostrar ventana modal de error
                             showErrorModal();
                         });
                 } else {
                     console.error("Nickname no encontrado");
-                    // Muestra la ventana modal de error de inicio de sesión
+                    // Mostrar ventana modal de error
                     showErrorModal();
                 }
             })
             .catch((error) => {
                 console.error("Error al buscar el nickname:", error.message);
-                // Muestra la ventana modal de error de inicio de sesión
+                // Mostrar ventana modal de error
                 showErrorModal();
             });
     });
